@@ -4,7 +4,7 @@ import nav from './config/nav'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/',
+  base: '/blog/',
   lang: "zh-CN",
   title: "周一实验室 labformonday",
   description: "Stay foolish, Stay hungry.",
