@@ -9,6 +9,7 @@ export default defineConfig({
   title: "周一实验室 labformonday",
   description: "Stay foolish, Stay hungry.",
 
+  lastUpdated: true,
   // 主题配置
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -50,7 +51,7 @@ export default defineConfig({
     },
 
     lastUpdated: {
-      text: 'Updated at',
+      text: '更新于',
       formatOptions: {
         dateStyle: 'full',
         timeStyle: 'medium'
@@ -58,15 +59,18 @@ export default defineConfig({
     },
 
     // 搜索功能
-    algolia: {
-      appId: "R2IYF7ETH7",
-      apiKey: "599cec31baffa4868cae4e79f180729b",
-      indexName: "index",
+    search: {
+      provider: 'local'
     },
+    // algolia: {
+    //   appId: "R2IYF7ETH7",
+    //   apiKey: "599cec31baffa4868cae4e79f180729b",
+    //   indexName: "index",
+    // },
 
-    carbonAds: {
-      code: 'your-carbon-code',
-      placement: 'your-carbon-placement'
-    }
+    // carbonAds: {
+    //   code: 'your-carbon-code',
+    //   placement: 'your-carbon-placement'
+    // }
   },
 })
