@@ -8,14 +8,14 @@ export default [
   {
     text: '前端',
     activeMatch: [
-      '/categories/vue/',
-      '/categories/react/',
-      '/categories/webpack/',
-      '/categories/vite/',
-      '/categories/rollup/',
-      '/categories/parcel/',
-      '/categories/gulp/',
-      '/categories/grunt/',
+      '/categories/frontend/vue/',
+      '/categories/frontend/react/',
+      '/categories/frontend/webpack/',
+      '/categories/frontend/vite/',
+      '/categories/frontend/rollup/',
+      '/categories/frontend/parcel/',
+      '/categories/frontend/gulp/',
+      '/categories/frontend/grunt/',
     ],
     items: [
       {
@@ -23,13 +23,13 @@ export default [
         items: [
           {
             text: 'Vue',
-            link: '/categories/vue/',
-            activeMatch: '/categories/vue/'
+            link: '/categories/frontend/vue/',
+            activeMatch: '/categories/frontend/vue/'
           },
           {
             text: 'React',
-            link: '/categories/react/',
-            activeMatch: '/categories/react/'
+            link: '/categories/frontend/react/',
+            activeMatch: '/categories/frontend/react/'
           },
         ]
       },
@@ -38,104 +38,121 @@ export default [
         items: [
           {
             text: 'Webpack',
-            link: '/categories/webpack/',
-            activeMatch: '/categories/webpack/'
+            link: '/categories/frontend/webpack/',
+            activeMatch: '/categories/frontend/webpack/'
           },
           {
             text: 'Vite',
-            link: '/categories/vite/',
-            activeMatch: '/categories/vite/'
+            link: '/categories/frontend/vite/',
+            activeMatch: '/categories/frontend/vite/'
           },
           {
             text: 'Rollup',
-            link: '/categories/rollup/',
-            activeMatch: '/categories/rollup/'
+            link: '/categories/frontend/rollup/',
+            activeMatch: '/categories/frontend/rollup/'
           },
           {
             text: 'Parcel',
-            link: '/categories/parcel/',
-            activeMatch: '/categories/parcel/'
+            link: '/categories/frontend/parcel/',
+            activeMatch: '/categories/frontend/parcel/'
           },
           {
             text: 'Gulp',
-            link: '/categories/gulp/',
-            activeMatch: '/categories/gulp/'
+            link: '/categories/frontend/gulp/',
+            activeMatch: '/categories/frontend/gulp/'
           },
           {
             text: 'Grunt',
-            link: '/categories/grunt/',
-            activeMatch: '/categories/grunt/'
+            link: '/categories/frontend/grunt/',
+            activeMatch: '/categories/frontend/grunt/'
           }
         ]
       },
       {
-        text: "校验工具",
+        text: "其他",
         items: [
           {
             text: 'Eslint',
-            link: '/categories/eslint/',
-            activeMatch: '/categories/eslint/'
+            link: '/categories/frontend/eslint/',
+            activeMatch: '/categories/frontend/eslint/'
           },
           {
             text: 'Prettier',
-            link: '/categories/prettier/',
-            activeMatch: '/categories/prettier/'
+            link: '/categories/frontend/prettier/',
+            activeMatch: '/categories/frontend/prettier/'
+          },
+          {
+            text: '从零搭建脚手架',
+            link: '/categories/frontend/scaffold/',
+            activeMatch: '/categories/frontend/scaffold/'
           },
         ]
-      }
+      },
+      
     ]
   },
   {
-    text: '服务端',
+    text: '后端',
     activeMatch: [
-      '/categories/php/',
-      '/categories/java/',
-      '/categories/linux/',
-      '/categories/nodejs/',
-      '/categories/python/',
-      '/categories/linux/',
-      '/categories/ubuntu/',
+      '/categories/backend/go/',
+      '/categories/backend/php/',
+      '/categories/backend/java/',
+      '/categories/backend/nodejs/',
+      '/categories/backend/python/',
     ],
     items: [
       {
         text: "服务端语言",
         items: [
           {
+            text: 'go',
+            link: '/categories/backend/go/',
+            activeMatch: '/categories/backend/go/'
+          },
+          {
             text: 'php',
-            link: '/categories/php/',
-            activeMatch: '/categories/php/'
+            link: '/categories/backend/php/',
+            activeMatch: '/categories/backend/php/'
           },
           {
             text: 'java',
-            link: '/categories/java/',
-            activeMatch: '/categories/java/'
+            link: '/categories/backend/java/',
+            activeMatch: '/categories/backend/java/'
           },
           {
             text: 'nodejs',
-            link: '/categories/nodejs/',
-            activeMatch: '/categories/nodejs/'
+            link: '/categories/backend/nodejs/',
+            activeMatch: '/categories/backend/nodejs/'
           },
           {
             text: 'python',
-            link: '/categories/python/',
-            activeMatch: '/categories/python/'
+            link: '/categories/backend/python/',
+            activeMatch: '/categories/backend/python/'
           },
         ]
       },
+    ]
+  },
+  {
+    text: '服务器',
+    activeMatch: [
+      '/categories/server/centos/',
+      '/categories/server/ubuntu/',
+    ],
+    items: [
       {
         text: "服务器",
         items: [
           {
-            text: 'linux',
-            link: '/categories/linux/',
-            activeMatch: '/categories/linux/'
+            text: 'centos',
+            link: '/categories/server/centos/',
+            activeMatch: '/categories/server/centos/'
           },
           {
             text: 'ubuntu',
-            link: '/categories/ubuntu/',
-            activeMatch: '/categories/ubuntu/'
+            link: '/categories/server/ubuntu/',
+            activeMatch: '/categories/server/ubuntu/'
           },
-
         ]
       },
     ]

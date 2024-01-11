@@ -1,26 +1,45 @@
+const other = [
+    {
+        text: 'Eslint',
+        items: [
+            { text: '序言', link: '/categories/frontend/eslint/' },
+            { text: '入门', link: '/categories/frontend/eslint/001' },
+            { text: '高级', link: '/categories/frontend/eslint/002' }
+        ]
+    },
+    {
+        text: 'Prettier',
+        items: [
+            { text: '序言', link: '/categories/frontend/prettier/' },
+            { text: '入门', link: '/categories/frontend/prettier/001' },
+            { text: '高级', link: '/categories/frontend/prettier/002' }
+        ]
+    },
+    {
+        text: '脚手架',
+        items: [
+            { text: '序言', link: '/categories/frontend/scaffold/' },
+            { text: '入门', link: '/categories/frontend/scaffold/001' },
+            { text: '高级', link: '/categories/frontend/scaffold/002' }
+        ]
+    }
+]
+
 export default {
-    "/categories/webpack/": [
+    "/categories/frontend/webpack/": [
         {
             text: 'Webpack',
-            collapsed: false,
             items: [
-                { text: '路线图', link: '/categories/webpack/' },
-                { text: '基础配置', link: '/categories/webpack/base' },
-                { text: 'CSS配置', link: '/categories/webpack/style' },
-                { text: 'Eslint', link: '/categories/webpack/eslint' },
-                { text: '开发服务器', link: '/categories/webpack/server' },
-                { text: '代码拆分', link: '/categories/webpack/split-chunk' },
+                { text: '路线图', link: '/categories/frontend/webpack/' },
+                { text: '基础配置', link: '/categories/frontend/webpack/base' },
+                { text: 'CSS配置', link: '/categories/frontend/webpack/style' },
+                { text: 'Eslint', link: '/categories/frontend/webpack/eslint' },
+                { text: '开发服务器', link: '/categories/frontend/webpack/server' },
+                { text: '代码拆分', link: '/categories/frontend/webpack/split-chunk' },
             ]
         },
     ],
-    "/categories/eslint/": [
-        {
-            text: 'Eslint',
-            items: [
-                { text: '初相识', link: '/eslint/' },
-                { text: '又邂逅', link: '/eslint/2' },
-                { text: '再回首', link: '/eslint/3' }
-            ]
-        }
-    ],
+    "/categories/frontend/eslint": other,
+    "/categories/frontend/prettier": other,
+    "/categories/frontend/scaffold": other,
 }

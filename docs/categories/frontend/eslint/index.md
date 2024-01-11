@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# 初相识
+# eslint
 
 This page demonstrates usage of some of the runtime APIs provided by VitePress.
 
