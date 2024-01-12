@@ -105,27 +105,27 @@ export default [
         text: "服务端语言",
         items: [
           {
-            text: 'go',
+            text: 'Go',
             link: '/categories/backend/go/',
             activeMatch: '/categories/backend/go/'
           },
           {
-            text: 'php',
+            text: 'PHP',
             link: '/categories/backend/php/',
             activeMatch: '/categories/backend/php/'
           },
           {
-            text: 'java',
+            text: 'Java',
             link: '/categories/backend/java/',
             activeMatch: '/categories/backend/java/'
           },
           {
-            text: 'nodejs',
+            text: 'NodeJS',
             link: '/categories/backend/nodejs/',
             activeMatch: '/categories/backend/nodejs/'
           },
           {
-            text: 'python',
+            text: 'Python',
             link: '/categories/backend/python/',
             activeMatch: '/categories/backend/python/'
           },
@@ -144,12 +144,12 @@ export default [
         text: "服务器",
         items: [
           {
-            text: 'centos',
+            text: 'CentOS',
             link: '/categories/server/centos/',
             activeMatch: '/categories/server/centos/'
           },
           {
-            text: 'ubuntu',
+            text: 'Ubuntu',
             link: '/categories/server/ubuntu/',
             activeMatch: '/categories/server/ubuntu/'
           },

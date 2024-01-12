@@ -1,3 +1,17 @@
+const webpack = [
+    {
+        text: 'Webpack',
+        items: [
+            { text: '路线图', link: '/categories/frontend/webpack/' },
+            { text: '基础配置', link: '/categories/frontend/webpack/base' },
+            { text: 'CSS配置', link: '/categories/frontend/webpack/style' },
+            { text: 'Eslint', link: '/categories/frontend/webpack/eslint' },
+            { text: '开发服务器', link: '/categories/frontend/webpack/server' },
+            { text: '代码拆分', link: '/categories/frontend/webpack/split-chunk' },
+        ]
+    },
+]
+
 const other = [
     {
         text: 'Eslint',
@@ -25,21 +39,30 @@ const other = [
     }
 ]
 
+const gulp = [
+    {
+        text: 'Gulp',
+        items: [
+            { text: '简介', link: '/categories/frontend/gulp/' },
+            { text: '快速入门', link: '/categories/frontend/gulp/001' },
+            { text: '安装', link: '/categories/frontend/gulp/002' },
+            { text: 'CLI命令行', link: '/categories/frontend/gulp/003' },
+            { text: 'gulpfile实例', link: '/categories/frontend/gulp/004' },
+            { text: '任务', link: '/categories/frontend/gulp/005' },
+            { text: 'API', link: '/categories/frontend/gulp/006' },
+            { text: '使用插件', link: '/categories/frontend/gulp/007' },
+            { text: '插件开发', link: '/categories/frontend/gulp/008' },
+            { text: '相关产品对比', link: '/categories/frontend/gulp/009' },
+            { text: '项目实例: Jquery插件开发', link: '/categories/frontend/gulp/010' },
+            { text: '资源', link: '/categories/frontend/gulp/011' },
+        ]
+    },
+]
+
 export default {
-    "/categories/frontend/webpack/": [
-        {
-            text: 'Webpack',
-            items: [
-                { text: '路线图', link: '/categories/frontend/webpack/' },
-                { text: '基础配置', link: '/categories/frontend/webpack/base' },
-                { text: 'CSS配置', link: '/categories/frontend/webpack/style' },
-                { text: 'Eslint', link: '/categories/frontend/webpack/eslint' },
-                { text: '开发服务器', link: '/categories/frontend/webpack/server' },
-                { text: '代码拆分', link: '/categories/frontend/webpack/split-chunk' },
-            ]
-        },
-    ],
+    "/categories/frontend/webpack/": webpack,
     "/categories/frontend/eslint": other,
     "/categories/frontend/prettier": other,
     "/categories/frontend/scaffold": other,
+    "/categories/frontend/gulp": gulp,
 }
