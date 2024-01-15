@@ -43,7 +43,7 @@ const gulp = [
     {
         text: 'Gulp',
         items: [
-            { text: '简介', link: '/categories/frontend/gulp/' },
+            { text: '简介', link: '/categories/frontend/gulp/000' },
             { text: '快速入门', link: '/categories/frontend/gulp/001' },
             { text: '安装', link: '/categories/frontend/gulp/002' },
             { text: 'CLI命令行', link: '/categories/frontend/gulp/003' },
