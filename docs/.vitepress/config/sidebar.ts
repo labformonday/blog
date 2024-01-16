@@ -61,11 +61,12 @@ const gulp = [
 
 const vmware = [
     {
-        text: '',
+        text: '虚拟机',
         items: [
-            { text: '下载 & 安装', link: '/categories/server/vmware/index.md' },
-            { text: '安装Windows系统', link: '/categories/server/vmware/001' },
-            { text: '安装Debian系统', link: '/categories/server/vmware/002' },
+            { text: 'VMware Fusion 下载 & 安装', link: '/categories/vmware/' },
+            { text: '安装Windows系统', link: '/categories/vmware/001' },
+            { text: '安装Debian系统', link: '/categories/vmware/002' },
+            { text: 'Jenkins搭建', link: '/categories/vmware/jenkins' },
         ]
     },
     
@@ -77,5 +78,5 @@ export default {
     "/categories/frontend/prettier": other,
     "/categories/frontend/scaffold": other,
     "/categories/frontend/gulp": gulp,
-    "/categories/server/vmware": vmware,
+    "/categories/vmware": vmware,
 }

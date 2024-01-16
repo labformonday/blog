@@ -134,39 +134,11 @@ export default [
     ]
   },
   {
-    text: '服务器',
+    text: '虚拟机',
     activeMatch: [
-      '/categories/server/vmware/',
-      '/categories/server/centos/',
-      '/categories/server/ubuntu/',
+      '/categories/vmware/',
     ],
-    items: [
-      {
-        text: "虚拟机",
-        items: [
-          {
-            text: 'VMware Fusion',
-            link: '/categories/server/vmware/',
-            activeMatch: '/categories/server/vmware/'
-          },
-        ]
-      },
-      {
-        text: "服务器",
-        items: [
-          {
-            text: 'CentOS',
-            link: '/categories/server/centos/',
-            activeMatch: '/categories/server/centos/'
-          },
-          {
-            text: 'Ubuntu',
-            link: '/categories/server/ubuntu/',
-            activeMatch: '/categories/server/ubuntu/'
-          },
-        ]
-      },
-    ]
+    link: '/categories/vmware/',
   },
   {
     text: '常见问题',
