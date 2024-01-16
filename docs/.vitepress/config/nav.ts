@@ -136,10 +136,21 @@ export default [
   {
     text: '服务器',
     activeMatch: [
+      '/categories/server/vmware/',
       '/categories/server/centos/',
       '/categories/server/ubuntu/',
     ],
     items: [
+      {
+        text: "虚拟机",
+        items: [
+          {
+            text: 'VMware Fusion',
+            link: '/categories/server/vmware/',
+            activeMatch: '/categories/server/vmware/'
+          },
+        ]
+      },
       {
         text: "服务器",
         items: [

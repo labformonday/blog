@@ -59,10 +59,23 @@ const gulp = [
     },
 ]
 
+const vmware = [
+    {
+        text: '',
+        items: [
+            { text: '下载 & 安装', link: '/categories/server/vmware/index.md' },
+            { text: '安装Windows系统', link: '/categories/server/vmware/001' },
+            { text: '安装Debian系统', link: '/categories/server/vmware/002' },
+        ]
+    },
+    
+]
+
 export default {
     "/categories/frontend/webpack/": webpack,
     "/categories/frontend/eslint": other,
     "/categories/frontend/prettier": other,
     "/categories/frontend/scaffold": other,
     "/categories/frontend/gulp": gulp,
+    "/categories/server/vmware": vmware,
 }
