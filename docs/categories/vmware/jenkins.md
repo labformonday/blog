@@ -75,6 +75,15 @@ brew services restart jenkins-lts
 
 ![010](./pics/jenkins//010.png)
 
+
+### 安装插件
+
+- Git
+- NodeJS: 需在全局工具中进行配置
+- Email Extension
+- Html Publisher
+...
+
 ## 使用 `war` 文件
 
 ::: tip
