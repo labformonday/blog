@@ -64,9 +64,9 @@ const vmware = [
         text: '虚拟机',
         items: [
             { text: 'VMware Fusion 下载 & 安装', link: '/categories/vmware/' },
-            { text: '安装Windows系统', link: '/categories/vmware/001' },
-            { text: '安装Debian系统', link: '/categories/vmware/002' },
-            { text: 'Jenkins搭建', link: '/categories/vmware/jenkins' },
+            { text: '安装 Windows 系统', link: '/categories/vmware/001' },
+            { text: '安装 Debian 系统', link: '/categories/vmware/002' },
+            { text: 'Jenkins 搭建', link: '/categories/vmware/jenkins' },
         ]
     },
     
