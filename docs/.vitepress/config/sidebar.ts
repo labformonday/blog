@@ -77,9 +77,11 @@ const ruoyi = [
         items: [
             { text: '序', link: '/categories/backend/ruoyi/' },
             { text: 'JDK安装', link: '/categories/backend/ruoyi/001' },
-            { text: 'Maven配置', link: '/categories/backend/ruoyi/002' },
-            { text: 'Mysql配置', link: '/categories/backend/ruoyi/002' },
-            { text: 'Redis配置', link: '/categories/backend/ruoyi/002' },
+            { text: 'Mysql安装', link: '/categories/backend/ruoyi/002' },
+            { text: 'Maven安装', link: '/categories/backend/ruoyi/003' },
+            { text: 'Redis安装', link: '/categories/backend/ruoyi/004' },
+            { text: 'IDEA开发者工具', link: '/categories/backend/ruoyi/005' },
+            { text: '若依代码下载', link: '/categories/backend/ruoyi/006' },
         ]
     },
     
