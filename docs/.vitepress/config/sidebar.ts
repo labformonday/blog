@@ -82,10 +82,22 @@ const ruoyi = [
             { text: 'Redis安装', link: '/categories/backend/ruoyi/004' },
             { text: 'IDEA开发者工具', link: '/categories/backend/ruoyi/005' },
             { text: '若依代码下载', link: '/categories/backend/ruoyi/006' },
+            { text: '若依二开', link: '/categories/backend/ruoyi/007' },
         ]
     },
-    
 ]
+
+const jeesite = [
+    {
+        text: 'JeeSite',
+        items: [
+            { text: '序', link: '/categories/backend/jeesite/' },
+            { text: 'JDK安装', link: '/categories/backend/jeesite/001' },
+            { text: 'Mysql安装', link: '/categories/backend/jeesite/002' },
+        ]
+    },
+]
+
 
 export default {
     "/categories/frontend/webpack/": webpack,
@@ -95,4 +107,5 @@ export default {
     "/categories/frontend/gulp": gulp,
     "/categories/vmware": vmware,
     "/categories/backend/ruoyi": ruoyi,
+    "/categories/backend/jeesite": jeesite,
 }

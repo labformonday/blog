@@ -100,6 +100,7 @@ export default [
       '/categories/backend/nodejs/',
       '/categories/backend/python/',
       '/categories/backend/ruoyi/',
+      '/categories/backend/jeesite/',
     ],
     items: [
       {
@@ -139,6 +140,11 @@ export default [
             text: '若依',
             link: '/categories/backend/ruoyi/',
             activeMatch: '/categories/backend/ruoyi/'
+          },
+          {
+            text: 'JeeSite',
+            link: '/categories/backend/jeesite/',
+            activeMatch: '/categories/backend/jeesite/'
           },
         ]
       },
