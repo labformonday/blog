@@ -71,6 +71,19 @@ const vmware = [
     },
     
 ]
+const ruoyi = [
+    {
+        text: '若依',
+        items: [
+            { text: '序', link: '/categories/backend/ruoyi/' },
+            { text: 'JDK安装', link: '/categories/backend/ruoyi/001' },
+            { text: 'Maven配置', link: '/categories/backend/ruoyi/002' },
+            { text: 'Mysql配置', link: '/categories/backend/ruoyi/002' },
+            { text: 'Redis配置', link: '/categories/backend/ruoyi/002' },
+        ]
+    },
+    
+]
 
 export default {
     "/categories/frontend/webpack/": webpack,
@@ -79,4 +92,5 @@ export default {
     "/categories/frontend/scaffold": other,
     "/categories/frontend/gulp": gulp,
     "/categories/vmware": vmware,
+    "/categories/backend/ruoyi": ruoyi,
 }

@@ -99,10 +99,11 @@ export default [
       '/categories/backend/java/',
       '/categories/backend/nodejs/',
       '/categories/backend/python/',
+      '/categories/backend/ruoyi/',
     ],
     items: [
       {
-        text: "服务端语言",
+        text: "后端语言",
         items: [
           {
             text: 'Go',
@@ -128,6 +129,16 @@ export default [
             text: 'Python',
             link: '/categories/backend/python/',
             activeMatch: '/categories/backend/python/'
+          },
+        ]
+      },
+      {
+        text: "后端框架",
+        items: [
+          {
+            text: '若依',
+            link: '/categories/backend/ruoyi/',
+            activeMatch: '/categories/backend/ruoyi/'
           },
         ]
       },
