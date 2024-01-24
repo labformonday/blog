@@ -98,6 +98,16 @@ const jeesite = [
     },
 ]
 
+const question = [
+    {
+        text: 'JeeSite',
+        items: [
+            { text: '序', link: '/categories/question/' },
+            { text: 'github访问失败', link: '/categories/question/001' },
+        ]
+    },
+]
+
 
 export default {
     "/categories/frontend/webpack/": webpack,
@@ -108,4 +118,5 @@ export default {
     "/categories/vmware": vmware,
     "/categories/backend/ruoyi": ruoyi,
     "/categories/backend/jeesite": jeesite,
+    "/categories/question": question,
 }
