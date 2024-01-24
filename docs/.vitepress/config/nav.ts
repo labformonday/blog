@@ -151,6 +151,13 @@ export default [
     ]
   },
   {
+    text: 'offer来了',
+    activeMatch: [
+      '/categories/offer/',
+    ],
+    link: '/categories/offer/',
+  },
+  {
     text: '虚拟机',
     activeMatch: [
       '/categories/vmware/',
@@ -159,6 +166,9 @@ export default [
   },
   {
     text: '常见问题',
+    activeMatch: [
+      '/categories/question/',
+    ],
     link: '/categories/question/',
   },
   {

@@ -100,14 +100,27 @@ const jeesite = [
 
 const question = [
     {
-        text: 'JeeSite',
+        text: '常见问题',
         items: [
             { text: '序', link: '/categories/question/' },
             { text: 'github访问失败', link: '/categories/question/001' },
+            { text: '待确认', link: '/categories/question/002' },
+            { text: '待确认', link: '/categories/question/003' },
+            { text: '待确认', link: '/categories/question/004' },
         ]
     },
 ]
 
+const offer = [
+    {
+        text: 'Offer来了',
+        items: [
+            { text: '序', link: '/categories/offer/' },
+            { text: 'JavaScript 数据类型', link: '/categories/offer/001' },
+            { text: 'JavaScript 全局对象 & 核心类与对象', link: '/categories/offer/002' },
+        ]
+    },
+]
 
 export default {
     "/categories/frontend/webpack/": webpack,
@@ -119,4 +132,5 @@ export default {
     "/categories/backend/ruoyi": ruoyi,
     "/categories/backend/jeesite": jeesite,
     "/categories/question": question,
+    "/categories/offer": offer,
 }
