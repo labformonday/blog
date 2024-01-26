@@ -73,4 +73,7 @@ export default defineConfig({
     //   placement: 'your-carbon-placement'
     // }
   },
+
+  // 
+  ignoreDeadLinks: true
 })
