@@ -172,6 +172,13 @@ export default [
     link: '/categories/question/',
   },
   {
+    text: '工具合集',
+    activeMatch: [
+      '/categories/tools/',
+    ],
+    link: '/categories/tools/',
+  },
+  {
     text: '关于我',
     items: [
       { text: 'Github', link: 'https://xdbaoku.com' },

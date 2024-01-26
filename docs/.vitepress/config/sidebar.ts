@@ -104,9 +104,9 @@ const question = [
         items: [
             { text: '序', link: '/categories/question/' },
             { text: 'github访问失败', link: '/categories/question/001' },
-            { text: '待确认', link: '/categories/question/002' },
-            { text: '待确认', link: '/categories/question/003' },
-            { text: '待确认', link: '/categories/question/004' },
+            { text: 'uniapp + vue3 + ts + vite 模板运行失败', link: '/categories/question/002' },
+            // { text: '待确认', link: '/categories/question/003' },
+            // { text: '待确认', link: '/categories/question/004' },
         ]
     },
 ]
@@ -117,7 +117,7 @@ const offer = [
         items: [
             { text: '序', link: '/categories/offer/' },
             { text: 'JavaScript 数据类型', link: '/categories/offer/001' },
-            { text: 'JavaScript 全局对象 & 核心类与对象', link: '/categories/offer/002' },
+            { text: 'JavaScript 核心 - 开箱即用', link: '/categories/offer/002' },
         ]
     },
 ]
