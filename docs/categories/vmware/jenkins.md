@@ -264,3 +264,5 @@ ls -la
 https://blog.csdn.net/linlongdeng/article/details/110439765
 
 https://www.bilibili.com/video/BV1zM41127hC/
+
+`publish over ssh使用`: https://www.cnblogs.com/pwindy/p/16281422.html
