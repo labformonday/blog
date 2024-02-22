@@ -30,24 +30,24 @@ ls -la
 ```bash
 
 # 解压
-tar -xvf node-v20.9.0-linux-x64.tar.xz 
+tar -xvf node-v16.20.2-linux-x64.tar.xz 
 
 # 查看是否解压成功
 ls -la
 
 # 重命名为node，也可以不重命名
-mv node-v20.9.0-linux-x64 node
+mv node-v16.20.2-linux-x64 node
 
 # 删除下载的压缩文件
-rm node-v20.9.0-linux-x64.tar.xz
+rm node-v16.20.2-linux-x64.tar.xz
 
 ```
 
 ## 创建软链接
 
 ```bash
-ln -s /usr/local/node-v20.9.0-linux-x64/bin/node /usr/local/bin/node
-ln -s /usr/local/node-v20.9.0-linux-x64/bin/npm /usr/local/bin/npm
+ln -s /usr/local/node-v16.20.2-linux-x64/bin/node /usr/local/bin/node
+ln -s /usr/local/node-v16.20.2-linux-x64/bin/npm /usr/local/bin/npm
 
 ```
 
@@ -84,11 +84,31 @@ npm config ls -l
 
 ```
 
-## 全局安装pnpm
+## 全局安装pnpm & 设置软链接
 
 ```bash
-
+# 全局安装pnpm
 npm i -g pnpm
+
+# 设置软链接
+ln -s /usr/local/node-v16.20.2-linux-x64/bin/pnpm /usr/local/bin/pnpm
+
+# 查看pnpm版本，验证是否安装配置成功
+pnpm -v
+
+```
+
+## 全局安装yarn & 设置软链接
+
+```bash
+# 全局安装yarn
+npm i -g yarn
+
+# 设置软链接
+ln -s /usr/local/node-v16.20.2-linux-x64/bin/yarn /usr/local/bin/yarn
+
+# 查看yarn版本，验证是否安装配置成功
+yarn -v
 
 ```
 
