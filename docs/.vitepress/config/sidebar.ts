@@ -67,6 +67,7 @@ const vmware = [
             { text: '安装 Windows 系统', link: '/categories/vmware/001' },
             { text: '安装 Debian 系统', link: '/categories/vmware/002' },
             { text: 'Jenkins 搭建', link: '/categories/vmware/jenkins' },
+            { text: 'Docker 命令', link: '/categories/vmware/docker' },
         ]
     },
     
