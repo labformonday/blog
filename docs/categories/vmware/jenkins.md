@@ -161,3 +161,106 @@ https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=
 
 1. 安装插件: `Email ...`
 2. 注册163邮箱并开启POP3和SMTP功能，获取密码
+3. 后续自己百度吧
+
+
+# 推荐插件
+
+下面列出一些推荐的插件，非必须
+
+## 插件: chinese
+
+搜索 `chinese` 并安装插件
+
+## 插件: GitHub
+
+搜索 `GitHub` 并安装插件
+
+
+# 重头来过
+
+如果是 `java -jar jenkins.war --httpPort=8080` 方式安装运行的Jenkins系统，可以直接删除当前用户目录下的 `.jenkins` 文件夹，然后重新执行安装命令 `java -jar jenkins.war --httpPort=8080`，重新安装
+
+然后查看初始密码，并配置
+
+之后选择安装推荐的插件吧，等待推荐的插件安装
+
+创建第一个管理员用户，用户名、密码、邮箱，保存并完成
+
+实例配置，设置 `Jenkins URL`，保存并完成，开始使用
+
+如果选择安装推荐插件，默认已经安装了中文语言包，因此界面显示的已经是中文了，并且github插件也在推荐的插件中
+
+下一步，让我们来创建项目吧
+
+## 创建一个项目吧
+
+创建项目，选择自由风格，确定并进入项目配置，添加描述
+
+选择项目是有参数的，添加参数，选择git参数，如果没有git参数选择，则需要安装插件: `Git Parameter`
+
+::: tip 注意
+
+需要安装插件: `Git Parameter`
+
+用于Git参数构建
+
+:::
+
+插件安装完成后，进入项目配置，添加git参数，名称为英文如: `Branch`，注意这个名称是一个shell的变量，之后可以读取，描述 `请选择要构建的分支`，参数类型选择 `分支`，默认值 `origin/master`，根据实际情况填写
+
+再添加一个选项参数，名称也是英文，如: `Environment`，选择一行一个，如下:
+
+```bash
+dev
+test
+prod
+
+```
+填写描述: `请选择构建环境`
+
+## 配置项目的Git拉取
+
+指定分支填写上一步的git参数名称吧，如: `${Branch}`
+
+## 构建环境需要NodeJS
+
+插件中搜索安装NodeJS，并到系统管理中进行配置
+
+## 构建步骤
+
+添加构建步骤，选择执行shell脚本吧
+
+```bash
+node -v
+npm -v
+pnpm -v
+echo $Branch
+echo $Environment
+pnpm install
+pnpm run build
+ls -la
+cd dist
+ls -la
+```
+
+## 构建后操作
+
+增加构建后操作步骤，把打包后生成的代码上传到对应环境的服务器的对应目录下
+
+需要安装插件 `Publish Over SSH`，安装后需要到系统配置下进行ssh servers的配置，可配置多个服务，
+
+单个配置如下即可，配置后可点击测试按钮进行测试下
+
+![015](./pics/015.png)
+
+进入到项目配置下，增加构建后操作步骤，选择 `Send build artifacts over SSH`
+
+![016](./pics/016.png)
+
+
+## 参考文章与视频
+
+https://blog.csdn.net/linlongdeng/article/details/110439765
+
+https://www.bilibili.com/video/BV1zM41127hC/
