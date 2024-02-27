@@ -253,4 +253,6 @@ javac -version
 
 cd /usr/local/apache-tomcat-9.0.86/bin
 ./startup.sh
+
+# 本机访问localhost:9999
 ```
