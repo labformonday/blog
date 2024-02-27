@@ -107,3 +107,150 @@ docker run -d -p 9002:80 --name nginx-9002 -v /Users/coffee/Documents/nginx/html
 
 
 ```
+
+## docker拉取ubuntu镜像并新建容器
+
+```bash
+
+# 查看ubuntu相关镜像
+docker search ubuntu
+
+# 拉取ubuntu镜像
+docker pull ubuntu
+
+# 查看ubuntu镜像
+docker images
+docker images -a
+docker images --all
+
+# 使用ubuntu镜像创建并启动容器
+docker run -dit --name ubuntu01 ubuntu /bin/bash
+
+# 进入容器
+docker exec -it ubuntu01 /bin/bash
+
+# 退出容器
+exit
+
+
+```
+
+
+## docker拉取centos镜像并新建容器
+
+```bash
+
+# 查看centos相关镜像
+docker search centos
+
+# 拉取centos镜像
+docker pull centos
+
+# 查看centos镜像
+docker images
+docker images -a
+docker images --all
+
+# 使用centos镜像创建并启动容器
+docker run -dit --name centos01 centos
+# -d: 后台运行，不添加-d的话，会直接进入容器，退出容器服务会停止
+docker run -it --name centos02 centos
+
+# 进入容器
+docker exec -it centos01 bash
+docker exec -it centos01 /bin/bash
+
+# 退出容器
+exit
+
+
+# curl获取网址源代码
+curl www.baidu.com > a.txt
+
+# wget下载资源，先安装wget
+yum install -y wget # 报错的话，解决方式如下
+
+# 解决方式
+# 进入到 yum 的 repos 目录
+cd /etc/yum.repos.d/
+# 修改 centos 文件内容
+sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+# 生成缓存更新
+yum makecache
+# 运行 yum update 并重新安装 wget
+yum update -y
+yum -y install wget
+
+# wget下载资源
+cd /usr/local
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.tar.gz
+
+```
+
+## centos容器安装JDK和TOMCAT
+
+
+
+```bash
+# 新建容器时，设置目录映射关系，并且指定平台
+docker run -dit --name centos01 -v /Users/coffee/Desktop/centos/:/usr/local --platform linux/amd64  centos
+
+# 查看容器状态
+docker ps
+
+# 进入容器
+docker exec -it centos01 bash
+
+# 进入/usr/local目录
+cd /usr/local
+
+# 下载jdk的linux版本的tar.gz文件
+https://www.oracle.com/java/technologies/downloads/#java8-linux
+
+# 解压缩
+tar -zxvf jdk-8u401-linux-x64.tar.gz
+
+# 获取jdk安装目录，并配置到/etc/profile文件中
+export JAVA_HOME=/usr/local/jdk1.8.0_401
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/jre/lib/rt.jar
+
+# 刷新文件缓存
+source /etc/profile
+
+# 查看jdk版本
+java -version
+javac -version
+
+
+
+# tomcat安装使用
+https://tomcat.apache.org/download-90.cgi
+
+cd /usr/local
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.tar.gz
+tar -zxvf apache-tomcat-9.0.86
+# 进入tomcat
+cd apache-tomcat-9.0.86
+# 进入bin目录
+cd bin
+# 启动tomcat，默认端口8080，因此创建容器时也要映射下端口: -p 9999:8080
+./startup.sh
+
+
+# 创建容器，添加端口映射
+docker run -dit --name centos01 -v /Users/coffee/Desktop/centos/:/usr/local --platform linux/amd64  -p 9999:8080  centos
+
+# 进入容器
+docker exec -it centos01 bash
+
+# 配置JDK并启动tomcat
+vi /etc/profile
+source /etc/profile
+java -version
+javac -version
+
+cd /usr/local/apache-tomcat-9.0.86/bin
+./startup.sh
+```
