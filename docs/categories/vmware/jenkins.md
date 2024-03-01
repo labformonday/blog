@@ -26,33 +26,33 @@ brew services start Jenkins-lts
 
 启动成功后，在浏览器输入`http://localhost:8080`，如下
 
-![001](./pics/Jenkins/001.png)
+![001](./pics/jenkins/001.png)
 
 按照上图提示，找到密码并键入，继续
 
-![002](./pics/Jenkins/002.png)
+![002](./pics/jenkins/002.png)
 
 选择`无`，点击安装，如下图所示
 
-![003](./pics/Jenkins/003.png)
+![003](./pics/jenkins/003.png)
 
 创建第一个管理员用户信息
 
-![004](./pics/Jenkins/004.png)
+![004](./pics/jenkins/004.png)
 
 保存后，进入实例配置页面（主要是配置URL），如下
 
-![005](./pics/Jenkins/005.png)
+![005](./pics/jenkins/005.png)
 
 保存后就配置完成了，开始使用Jenkins
 
-![006](./pics/Jenkins/006.png)
+![006](./pics/jenkins/006.png)
 
 ### 更换插件源
 
 - 登录后界面如下
 
-![007](./pics/Jenkins/007.png)
+![007](./pics/jenkins/007.png)
 
 - 更换插件源: https://mirrors.tuna.tsinghua.edu.cn/Jenkins/updates/update-center.json
 
@@ -62,9 +62,9 @@ https://mirrors.tuna.tsinghua.edu.cn/Jenkins/updates/update-center.json
 
 更换原因: `Jenkins` 插件源默认连接的是 `Jenkins` 自己的服务器，如果小伙伴们连接外网的速度不够好， 就容易出现下载插件失败的问题
 
-![008](./pics/Jenkins/008.png)
+![008](./pics/jenkins/008.png)
 
-![009](./pics/Jenkins/009.png)
+![009](./pics/jenkins/009.png)
 
 将`~/.Jenkins/updates/default.json`文件中的`updates.Jenkins.io/download`更换为`mirrors.tuna.tsinghua.edu.cn/Jenkins`
 将`~/.Jenkins/updates/default.json`文件中的`www.google.com`更换为`www.baidu.com`
@@ -78,7 +78,7 @@ brew services restart Jenkins-lts
 
 ### 创建Item或Job
 
-![010](./pics/Jenkins/010.png)
+![010](./pics/jenkins/010.png)
 
 
 ### 安装插件
