@@ -324,8 +324,23 @@ yum install policycoreutils-python
 
 # 再次安装gitlab
 rpm -ivh gitlab-ce-12.4.2-ce.0.el7.x86_64.rpm
+rpm -qa | grep gitlab # 查看 gitlab 是否被安装
+rpm -e gitlab-ce-12.4.2-ce.0.el7.x86_64 # 卸载 gitlab 
+# rpm -e 需要卸载的安装包
+
 
 # 还是安装失败，究其原因还是因为软件不是arm架构的，因此放弃了
+
+# 修改配置
+vi /etc/gitlab/gitlab.rb # 修改external_url 为 ip:8001，修改nginx['listen_port']为8001
+
+# 重载配置及启动gitlab
+gitlab-ctl reconfigure
+gitlab-ctl restart
+
+# 把8001端口添加到防火墙
+firewall-cmd --zone=public --add-port=8001/tcp --permanent
+firewall-cmd --reload
 
 
 ```
