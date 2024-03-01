@@ -108,6 +108,42 @@ docker run -d -p 9002:80 --name nginx-9002 -v /Users/coffee/Documents/nginx/html
 
 ```
 
+## docker 搭建 jenkins 系统
+
+```bash
+
+# 搜索jenkins相关镜像
+docker search jenkins
+
+# 拉取jenkins镜像
+docker pull jenkins/jenkins:lts
+
+# 根据镜像创建容器
+docker run -d -p 9100:8080 -p 50000:50000 --name jenkins-9100 jenkins/jenkins:lts
+# -d 后台运行
+# -p 9100:8080 设置端口映射
+# -p 50000:50000 设置端口映射
+# --name jenkins-9100 指定容器名
+# jenkins/jenkins:lts 使用的镜像
+
+# 查看容器状态
+docker ps
+docker ps -a
+docker ps --all
+
+# 浏览器打开localhost:9100，需要解锁Jenkins
+# 查看初始秘钥
+docker logs jenkins-9100
+
+# 或者进入Jenkins容器，查看初始秘钥
+docker exec -it jenkins-9100 bash # 进入容器
+cd /var/jenkins_home/ # 进入Jenkins目录
+cat secrets/initialAdminPassword # 查看初始秘钥
+
+# 浏览器页面填写初始秘钥，进入Jenkins安装
+
+```
+
 ## docker拉取ubuntu镜像并新建容器
 
 ```bash
@@ -185,6 +221,112 @@ yum -y install wget
 # wget下载资源
 cd /usr/local
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.tar.gz
+
+```
+
+
+## centos 容器，搭建 gitlab 服务
+
+```bash
+
+# 使用centos镜像创建并启动容器
+docker run -dit --name centos01 centos
+# -d: 后台运行，不添加-d的话，会直接进入容器，退出容器服务会停止
+docker run -it --name centos02 centos
+
+# 进入容器
+docker exec -it centos01 bash
+docker exec -it centos01 /bin/bash
+
+# 安装相关依赖
+yum -y install policycoreutils openssh-server openssh-clients postfix
+
+# 上面安装命令会报错，解决方式如下:
+# 进入到 yum 的 repos 目录
+cd /etc/yum.repos.d/
+# 修改 centos 文件内容
+sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+# 生成缓存更新
+yum makecache
+# 运行 yum update
+yum update -y
+
+# 重新执行安装命令
+yum -y install policycoreutils openssh-server openssh-clients postfix
+
+# 启动ssh服务 & 设置为开机启动
+systemctl enable sshd && sudo systemctl start sshd
+
+# 上面还是会报错，因此，放弃了
+
+# 使用centos7镜像测试下吧
+docker pull centos:7
+
+# 创建容器
+docker run -dit --name centos01 centos:7
+
+# 进入容器
+docker exec -it centos01 bash
+
+# 安装依赖
+yum -y install policycoreutils openssh-server openssh-clients postfix
+
+# 启动ssh服务 & 设置为开机启动
+systemctl enable sshd && sudo systemctl start sshd
+
+# 还是报错，尝试创建容器时指定--privileged=true参数，并指定/usr/sbin/init
+docker run -dit --name centos01 --privileged=true centos:7 /usr/sbin/init
+
+# 进入容器
+docker exec -it centos01 bash
+
+# 安装依赖
+yum -y install policycoreutils openssh-server openssh-clients postfix
+
+# 启动ssh服务 & 设置为开机启动
+systemctl enable sshd && sudo systemctl start sshd
+
+# 如果是苹果M2芯片还是会报错，解决方式如下
+https://blog.csdn.net/lideqiang110119/article/details/129525432
+
+# 再次尝试: 启动ssh服务 & 设置为开机启动
+systemctl enable sshd && sudo systemctl start sshd
+
+# 去掉sudo，再次尝试: 启动ssh服务 & 设置为开机启动
+systemctl enable sshd && systemctl start sshd
+
+# 查看sshd服务状态
+systemctl status sshd
+
+# 设置postfix开机自启，并启动，postfix支持gitlab发信功能
+systemctl enable postfix && systemctl start postfix
+
+# 开放ssh以及http服务，然后重新加载防火墙列表，没有防火墙的话，这一步省略吧
+# firewall-cmd --add-service=ssh --permanent
+# firewall-cmd --add-service=http --permanent
+# firewall-cmd --reload
+
+# 安装wget
+yum -y install wget
+
+# 切换目录
+cd ~
+
+# 下载gitlab包
+wget https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-12.4.2-ce.0.el7.x86_64.rpm
+
+# 安装gitlab
+rpm -ivh gitlab-ce-12.4.2-ce.0.el7.x86_64.rpm
+
+# 上面安装报错policycoreutils-python，执行下面命令
+yum install policycoreutils-python
+
+# 再次安装gitlab
+rpm -ivh gitlab-ce-12.4.2-ce.0.el7.x86_64.rpm
+
+# 还是安装失败，究其原因还是因为软件不是arm架构的，因此放弃了
+
 
 ```
 
