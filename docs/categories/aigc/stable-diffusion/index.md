@@ -1,5 +1,9 @@
 # MAC 安装 Stable Diffusion
 
+## 学习
+
+https://www.bilibili.com/video/BV1iZ421z7F9
+
 ## homebrew 安装
 
 ## 安装依赖插件
@@ -30,6 +34,19 @@ cd stable-diffusion-webui
 
 ./webui.sh
 ```
+
+## 汉化
+
+- 安装汉化插件 `sd-webui-bilingual-localization`
+  `Bilingual Localization UI related`
+
+  https://github.com/journey-ad/sd-webui-bilingual-localization
+
+- 下载中文语言包
+
+  下载: https://github.com/dtlnor/stable-diffusion-webui-localization-zh_CN
+
+  把 `localizations/zh_CN.json` 放到 `stable-diffusion-webui/localizations` 目录下
 
 ## 常见问题
 
