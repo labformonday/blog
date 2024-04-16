@@ -88,7 +88,7 @@ export default [
           },
         ]
       },
-      
+
     ]
   },
   {
@@ -148,6 +148,27 @@ export default [
           },
         ]
       },
+    ]
+  },
+  {
+    text: 'AIGC',
+    activeMatch: [
+      '/categories/aigc/stable-diffusion/',
+    ],
+    items: [
+      {
+        text: "分类",
+        items: [
+          {
+            text: 'stable-diffusion',
+            link: '/categories/aigc/stable-diffusion/',
+            activeMatch: '/categories/aigc/stable-diffusion/'
+          },
+
+
+        ]
+      },
+
     ]
   },
   {
